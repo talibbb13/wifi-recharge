@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Payment Form</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container d-flex align-items-center justify-content-center vh-100">
+    <div class="card">
+      <div class="card-header">
+        Payment Form
+      </div>
+      <div class="card-body">
+        <form id="paymentForm">
+          <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" class="form-control" id="username" placeholder="Enter your username">
+          </div>
+          <div class="form-group">
+            <label for="speed">Mbps Speed</label>
+            <input type="number" class="form-control" id="speed" placeholder="Enter your Mbps speed">
+          </div>
+          <div class="text-center">
+            <button type="button" class="btn btn-primary" onclick="payment()">Make Payment</button>
+            <button type="button" class="btn btn-secondary" onclick="confirmPayment()">Confirm Payment</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="payment-confirmation hidden" id="paymentConfirmation">
+    <div class="overlay"></div>
+    <div class="popup">
+      <h2>We are Looking into it</h2>
+      <p id="paymentMessage">if you have paid the amount by qr code you will be recharged very soon.</p>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+
+</html>
